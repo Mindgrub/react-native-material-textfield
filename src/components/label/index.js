@@ -85,22 +85,16 @@ export default class Label extends PureComponent {
       errorColor,
       baseColor,
       tintColor,
+      labelColor,
       baseSize,
       basePadding,
       style,
       errored,
-      active, 
+      active,
       focused,
       animationDuration,
       ...props
     } = this.props;
-
-    let color = restricted?
-      errorColor:
-      focus.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
-      });
 
     let top = input.interpolate({
       inputRange: [0, 1],
@@ -116,7 +110,7 @@ export default class Label extends PureComponent {
         outputRange: [fontSize, activeFontSize],
       }),
 
-      color,
+      color: labelColor,
     };
 
     let containerStyle = {

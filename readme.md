@@ -76,6 +76,7 @@ class Example extends Component {
  labelFontSize         | Text field label font size                  |   Number | 12
  labelHeight           | Text field label base height                |   Number | 32
  labelPadding          | Text field label base padding               |   Number | 4
+ labelColor            | Text field label font color                 |   String | rgb(0, 0, 0)
  inputContainerPadding | Text field input container base padding     |   Number | 8
  lineWidth             | Text field underline width                  |   Number | 0.5
  activeLineWidth       | Text field active underline width           |   Number | 2
