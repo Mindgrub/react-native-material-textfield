@@ -57,6 +57,7 @@ export default class TextField extends PureComponent {
     animationDuration: PropTypes.number,
 
     fontSize: PropTypes.number,
+    fontFamily: PropTypes.string,
     titleFontSize: PropTypes.number,
     labelFontSize: PropTypes.number,
     labelHeight: PropTypes.number,
@@ -299,6 +300,7 @@ export default class TextField extends PureComponent {
     let {
       [type]: affix,
       fontSize,
+      fontFamily,
       baseColor,
       animationDuration,
       affixTextStyle,
@@ -313,6 +315,7 @@ export default class TextField extends PureComponent {
       active,
       focused,
       fontSize,
+      fontFamily,
       baseColor,
       animationDuration,
     };
@@ -337,6 +340,7 @@ export default class TextField extends PureComponent {
       disabledLineWidth,
       animationDuration,
       fontSize,
+      fontFamily,
       titleFontSize,
       labelFontSize,
       labelHeight,
@@ -405,6 +409,8 @@ export default class TextField extends PureComponent {
       color: (disabled || defaultVisible)?
         baseColor:
         textColor,
+
+      fontFamily,
 
       ...(props.multiline?
         {
